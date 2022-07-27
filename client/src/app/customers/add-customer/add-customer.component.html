@@ -1,0 +1,30 @@
+<!--<p>add-customer works!</p>-->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Add customer</h3>
+        </div>
+        <div class="panel-body">
+          <form (ngSubmit)="onSubmit()" #f="ngForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" class="form-control" name="name" [(ngModel)]="customer.name" required>
+            </div>
+            <div class="form-group">
+              <label for="address">Address</label>
+              <input type="address" id="address" class="form-control" name="address" [(ngModel)]="customer.address" required>
+            </div>
+            <div class="form-group">
+              <label for="website">Website</label>
+              <input type="website" id="website" class="form-control" name="website" [(ngModel)]="customer.website" required>
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

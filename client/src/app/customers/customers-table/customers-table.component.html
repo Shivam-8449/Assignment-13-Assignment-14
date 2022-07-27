@@ -1,0 +1,23 @@
+<div class="panel-body card-body">
+  <button #refreshBtn class="btn" id="refresh-btn" (click)="refresh()">Refresh Data</button>
+  <div class="table-responsive">
+    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>WEBSITE</th>
+        <th>ADDRESS</th>
+        <th>ACTIONS</th>
+        <th>USERS</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr app-customer-table-row [customer]="customer" (customerChanged)="onCustomersChange($event)" *ngFor="let customer of customers"></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="add-customer-container">
+    <button class="btn btn-primary" (click)="addCustomer()">Add Customer</button>
+  </div>
+</div>

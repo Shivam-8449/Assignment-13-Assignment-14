@@ -1,0 +1,14 @@
+<td>{{customer.id}}</td>
+<td><input type="text" name="name" value="{{customer.name}}" [(ngModel)]="customer.name" [disabled]="!editMode"></td>
+<td><input type="text" name="website" value="{{customer.website}}" [(ngModel)]="customer.website" [disabled]="!editMode"></td>
+<td><input type="text" name="address" value="{{customer.address}}" [(ngModel)]="customer.address" [disabled]="!editMode"></td>
+<td>
+  <button class="btn btn-outline-primary" [hidden]="editMode" (click)="edit()">Edit</button>
+  <button class="btn btn-outline-danger" [hidden]="editMode" (click)="delete()">Delete</button>
+  <button class="btn btn-outline-success" [hidden]="!editMode" (click)="save()">Save</button>
+  <button class="btn btn-outline-warning" [hidden]="!editMode" (click)="cancel()">Cancel</button>
+</td>
+<td>
+  <button class="btn btn-outline-primary" (click)="showUsers()">Show Users</button>
+</td>
+

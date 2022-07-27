@@ -1,0 +1,30 @@
+<!--<td *ngFor="let prop of userProps">-->
+<!--  <input class="input-control" [disabled]="!editMode" *ngIf="userProps[0] != prop && userProps[6] != prop && userProps[8] != prop" [(ngModel)]="user[prop]"/>-->
+<!--  <select class="input-control" [disabled]="!editMode" *ngIf="userProps[6] == prop" [(ngModel)]="user[prop]" value="{{user.role_id}}">-->
+<!--    <option value="{{role.SUPERADMIN}}">SUPERADMIN</option>-->
+<!--    <option value="{{role.ADMIN}}">ADMIN</option>-->
+<!--    <option value="{{role.SUBSCRIBER}}">SUBSCRIBER</option>-->
+<!--  </select>-->
+<!--  <input class="input-control" type="number" [disabled]="!editMode" *ngIf="userProps[8] == prop" [(ngModel)]="user[prop]"/>-->
+<!--</td>-->
+
+<td><input type="text" name="firstname" value="{{user.firstname}}" [(ngModel)]="user.firstname" [disabled]="!editMode"></td>
+<td><input type="text" name="middlename" value="{{user.middlename}}" [(ngModel)]="user.middlename" [disabled]="!editMode"></td>
+<td><input type="text" name="lastname" value="{{user.lastname}}" [(ngModel)]="user.lastname" [disabled]="!editMode"></td>
+<td><input type="text" name="email" value="{{user.email}}" [(ngModel)]="user.email" [disabled]="!editMode"></td>
+<td><input type="text" name="phone" value="{{user.phone}}" [(ngModel)]="user.phone" [disabled]="!editMode"></td>
+<td>
+    <select class="input-control" name="role" [disabled]="!editMode" [(ngModel)]="user.role_id" value="{{user.role_id}}">
+      <option value="{{role.SUPERADMIN}}">SUPERADMIN</option>
+      <option value="{{role.ADMIN}}">ADMIN</option>
+      <option value="{{role.SUBSCRIBER}}">SUBSCRIBER</option>
+    </select>
+</td>
+<td><input type="text" name="address" value="{{user.address}}" [(ngModel)]="user.address" [disabled]="!editMode"></td>
+<td><input type="number" name="customerId" value="{{user.customer_id}}" [(ngModel)]="user.customer_id" [disabled]="!editMode"></td>
+<td class="action-items">
+  <button class="btn btn-outline-primary" (click)="edit()" *ngIf="!editMode">Edit</button>
+  <button class="btn btn-outline-danger" (click)="delete()" *ngIf="!editMode">Delete</button>
+  <button class="btn btn-outline-success" (click)="save()" *ngIf="editMode">Save</button>
+  <button class="btn btn-outline-warning" (click)="cancel()" *ngIf="editMode">Cancel</button>
+</td>

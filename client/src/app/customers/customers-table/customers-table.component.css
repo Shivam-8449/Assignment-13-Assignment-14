@@ -1,0 +1,13 @@
+#refresh-btn {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  background-color: #4de6ff;
+}
+.add-customer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px
+}

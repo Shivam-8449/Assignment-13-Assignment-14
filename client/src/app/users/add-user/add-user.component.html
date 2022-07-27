@@ -1,0 +1,58 @@
+<!-- <p>add-user works!</p> -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Add User</h3>
+        </div>
+        <div class="panel-body">
+          <form (ngSubmit)="onSubmit()" #f="ngForm">
+            <!-- <pre>{{f.value | json}}</pre> -->
+            <div class="form-group">
+              <label for="first-name">First Name</label>
+              <input type="text" class="form-control" id="first-name" name="firstname" [(ngModel)]="user.firstname"
+                     required>
+            </div>
+            <div class="form-group">
+              <label for="middle-name">Middle Name</label>
+              <input type="text" class="form-control" id="middle-name" name="middlename" [(ngModel)]="user.middlename">
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last Name</label>
+              <input type="text" class="form-control" id="last-name" name="lastname" [(ngModel)]="user.lastname">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" name="email" [(ngModel)]="user.email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="text" class="form-control" id="phone" name="phone" [(ngModel)]="user.phone" required>
+            </div>
+            <div class="form-group">
+              <label for="role">Role</label>
+              <select class="form-control" id="role" name="role" [(ngModel)]="user.role_id">
+                <option value="{{role.SUPERADMIN}}">SUPERADMIN</option>
+                <option value="{{role.ADMIN}}">ADMIN</option>
+                <option value="{{role.SUBSCRIBER}}">SUBSCRIBER</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="address">Address</label>
+              <input type="address" class="form-control" id="address" name="address" [(ngModel)]="user.address"
+                     required>
+            </div>
+            <div class="form-group">
+              <label for="customer_id">Customer ID</label>
+              <input type="number" class="form-control" id="customer_id" name="customer_id"
+                     [(ngModel)]="user.customer_id" required>
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

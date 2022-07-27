@@ -1,0 +1,21 @@
+.container {
+  width: 40%;
+  height: 100%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container button {
+  width: max-content;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #00bcd4;
+  color: white;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

@@ -1,0 +1,29 @@
+<!--<p>customer-users works!</p>-->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel card panel-default">
+        <div class="panel-heading card-header">
+          <h3 class="panel-title card-title">
+            <span class="glyphicon glyphicon-user"></span>
+            Customer Name
+          </h3>
+          <div class="card-header card-header-icon" data-background-color="green">
+            <i class="material-icons">{{customer?.name}}</i>
+          </div>
+        </div>
+        <div class="panel card">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class=" card-header">
+                <h4 class="card-title">Associated Users</h4>
+                <app-users-table [users]="associatedUsers"></app-users-table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
